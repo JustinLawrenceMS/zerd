@@ -1,0 +1,85 @@
+<!DOCTYPE html5>
+<html>
+
+	<head>
+
+		<title>Zerd</title>
+
+		<style>
+
+			* {
+				background-color: black;
+				color: lightgreen;
+
+			}
+
+			.answer {
+
+				width: 100%;
+				padding: 1em;
+				border: none;
+				font-size: 1em;
+				
+			
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<h1
+			class="header">ZERD TEXT-BASED ADVENTURE</h1>
+
+		<h4
+			id="question"
+			class="question">
+			You are walking alone through a moonlit forest when you see something you haven't seen before.  A goblin covered with strands of hair, moss and moonlight opens a door hidden at the root of a tree.  He pokes his out, looks around and goes back in.  He doesn't see you.  What do you do?
+		</h1>
+		<input
+		    id="answer"   
+		    class="answer"
+		    autofocus />
+
+	</body>
+<!--
+	<script type="module" src="zerd.json"></script>	
+	-->
+	
+<script type="module">
+
+	import * as dialogs from './zerd.json';
+
+	const question = document.getElementById('question');
+
+	const answer = document.getElementById('answer');
+
+	answer.addEventListener('keypress', function(e){
+
+			if(e.key == 'Enter'){
+
+
+					let val = answer.value;
+					answer.value = "";
+					setQuestion(val);
+					
+
+				}
+
+		});
+	function setQuestion(val){
+		
+			let if_answers = [];
+
+			for(var i=0; i<dialogs.length; i++){
+
+				if_answers[i] = dialogs[i].if_answer;
+
+
+			}
+
+		console.log(if_answers);
+
+		}
+</script>
+</html>

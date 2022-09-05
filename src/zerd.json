@@ -1,0 +1,9 @@
+[
+	{
+		"dialog_id":1,
+		"setting_id":1,
+		"setting_description":"forest intro",
+		"if_answer":"kick him",
+		"then_question":"Your kick lands on empty air.  The goblin has closed the doorto the dungeon and has gone back inside.  What do you want to do now?"
+	}
+]
