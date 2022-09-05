@@ -78,7 +78,15 @@
 
 			}
 
-		console.log(if_answers);
+			for(var i=0; i<if_answers.length; i++){
+
+				if(val == if_answers[i]){
+
+					question.innerHTML = dialogs[i].then_question;
+
+				}
+
+			}
 
 		}
 </script>
