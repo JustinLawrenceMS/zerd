@@ -4,6 +4,13 @@
 		"setting_id":1,
 		"setting_description":"forest intro",
 		"if_answer":"kick him",
-		"then_question":"Your kick lands on empty air.  The goblin has closed the doorto the dungeon and has gone back inside.  What do you want to do now?"
+		"then_question":"Your kick lands on empty air.  The goblin has already closed the door to the dungeon and has gone back inside.  What do you want to do now?"
+	},
+	{
+		"dialog_id":2,
+		"setting_id":1,
+		"setting_description":"forest intro",
+		"if_answer":"look around",
+		"then_question":"The air is cool and crisp and the moon is shining brightly.  There is no breeze.  The forest is very still.  Under the baugh of the tree you see a crudely but well camoflaged door and you hear a din of laughter rattling off from far away in the dungeon.  Just then, you see the wings of a large bird or flying reptile sillohuetted against the moon.  What do you want to do now?"
 	}
 ]

@@ -35,17 +35,15 @@
 			id="question"
 			class="question">
 			You are walking alone through a moonlit forest when you see something you haven't seen before.  A goblin covered with strands of hair, moss and moonlight opens a door hidden at the root of a tree.  He pokes his out, looks around and goes back in.  He doesn't see you.  What do you do?
-		</h1>
+		</h4>
 		<input
 		    id="answer"   
 		    class="answer"
+		    value=""
+		    type="text"
 		    autofocus />
 
 	</body>
-<!--
-	<script type="module" src="zerd.json"></script>	
-	-->
-	
 <script type="module">
 
 	import * as dialogs from './zerd.json';
@@ -54,19 +52,30 @@
 
 	const answer = document.getElementById('answer');
 
-	answer.addEventListener('keypress', function(e){
+	setEvent();
+
+	function setEvent(){
+
+		answer.classList = answer.classList + ' active';
+
+		answer.addEventListener('keypress', function(e){
 
 			if(e.key == 'Enter'){
 
+				answer.classList = 'answer';
 
-					let val = answer.value;
-					answer.value = "";
-					setQuestion(val);
-					
+				answer.removeEventListener('keypress', function(e){});
 
-				}
+				let val = answer.value;
+
+				setQuestion(val);
+				
+
+			}
 
 		});
+
+	}
 	function setQuestion(val){
 		
 			let if_answers = [];
@@ -82,7 +91,12 @@
 
 				if(val == if_answers[i]){
 
+					answer.value = " ";
 					question.innerHTML = dialogs[i].then_question;
+					if(answer.classList != 'answer active'){
+						setEvent();
+
+					}
 
 				}
 
