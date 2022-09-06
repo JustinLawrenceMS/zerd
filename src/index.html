@@ -10,12 +10,13 @@
 			* {
 				background-color: black;
 				color: lightgreen;
+				font-family: Inconsolata;
 
 			}
 
 			.question {
 
-				font-size: 2em;
+				font-size: 1em;
 
 			}
 			.answer {
@@ -85,7 +86,7 @@
 
 				if(val == if_answers[i]){
 
-					answer.value = ' ';
+					answer.value = ' '.trim();
 					question.innerHTML = dialogs[i].then_question;
 
 				}
