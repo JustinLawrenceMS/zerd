@@ -13,6 +13,11 @@
 
 			}
 
+			.question {
+
+				font-size: 2em;
+
+			}
 			.answer {
 
 				width: 100%;
@@ -31,17 +36,16 @@
 		<h1
 			class="header">ZERD TEXT-BASED ADVENTURE</h1>
 
-		<h4
+		<div
 			id="question"
 			class="question">
 			You are walking alone through a moonlit forest when you see something you haven't seen before.  A goblin covered with strands of hair, moss and moonlight opens a door hidden at the root of a tree.  He pokes his out, looks around and goes back in.  He doesn't see you.  What do you do?
-		</h4>
-		<input
+		</div>
+		<textarea
 		    id="answer"   
 		    class="answer"
-		    value=""
-		    type="text"
-		    autofocus />
+		    autofocus>
+		</textarea>
 
 	</body>
 <script type="module">
@@ -52,32 +56,22 @@
 
 	const answer = document.getElementById('answer');
 
-	setEvent();
+	answer.addEventListener('keydown', function(e){
 
-	function setEvent(){
 
-		answer.classList = answer.classList + ' active';
+		if(e.key == 'Enter'){
 
-		answer.addEventListener('keypress', function(e){
+			let val = answer.value.trim();
 
-			if(e.key == 'Enter'){
+			setQuestion(val);
 
-				answer.classList = 'answer';
+		}
+			
+	});
 
-				answer.removeEventListener('keypress', function(e){});
-
-				let val = answer.value;
-
-				setQuestion(val);
-				
-
-			}
-
-		});
-
-	}
 	function setQuestion(val){
-		
+
+
 			let if_answers = [];
 
 			for(var i=0; i<dialogs.length; i++){
@@ -91,12 +85,8 @@
 
 				if(val == if_answers[i]){
 
-					answer.value = " ";
+					answer.value = ' ';
 					question.innerHTML = dialogs[i].then_question;
-					if(answer.classList != 'answer active'){
-						setEvent();
-
-					}
 
 				}
 
