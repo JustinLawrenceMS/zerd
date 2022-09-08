@@ -1,0 +1,5 @@
+apps:
+- name: zerd
+  random-route: true
+  memory: 128M
+
