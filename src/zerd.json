@@ -11,6 +11,20 @@
 		"setting_id":1,
 		"setting_description":"forest intro",
 		"if_answer":"look around",
-		"then_question":"The air is cool and crisp and the moon is shining brightly.  There is no breeze.  The forest is very still.  Under the baugh of the tree you see a crudely but well camoflaged door and you hear a din of laughter rattling off from far away in the dungeon.  Just then, you see the wings of a large bird or flying reptile sillohuetted against the moon.  What do you want to do now?"
-	}
+		"then_question":"The air is cool and crisp and the moon is shining brightly.  There is no breeze.  The forest is very still.  Under the baugh of the tree you see a crudely but well camoflaged door and you hear a din of laughter rattling off from far away in the dungeon.  Just then, you see the wings of a large bird or flying reptile sillohuetted against the moon.  You see the glow of something like a window or a stationary oil lamp off in a distant part of the forest.  What do you want to do now?"
+	},
+	{
+		"dialog_id":3,
+		"setting_id":1,
+		"setting_description":"forest intro",
+		"if_answer":"open the door",
+		"then_question":"The door is locked.  What do you want to do now?"
+	},
+	{
+		"dialog_id":4,
+		"setting_id":1,
+		"setting_description":"forest intro",
+		"if_answer":"move toward the light",
+		"then_question":"After a long hike through treacherous forest, you come upon the house of a wizened gnome. \"Come closer, my children.  I've been expecting you,\" he says.  He tells you that his name is Siamor, and that it is his eternal duty to guard the forest from the Goblin King. \"He is gaining in strength,\" says Siamor, \"and he must be stopped.\  Will you swear allegiance to the Gnomish King and stop the Goblin invasion?  \<button class=\"zerd-btn\"\>Yes.\<\/button\>" 
+	}	
 ]
