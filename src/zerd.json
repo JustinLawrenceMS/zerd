@@ -25,6 +25,6 @@
 		"setting_id":1,
 		"setting_description":"forest intro",
 		"if_answer":"move toward the light",
-		"then_question":"After a long hike through treacherous forest, you come upon the house of a wizened gnome. \"Come closer, my children.  I've been expecting you,\" he says.  He tells you that his name is Siamor, and that it is his eternal duty to guard the forest from the Goblin King. \"He is gaining in strength,\" says Siamor, \"and he must be stopped.\  Will you swear allegiance to the Gnomish King and stop the Goblin invasion?  \<button class=\"zerd-btn\"\>Yes.\<\/button\>" 
+		"then_question":"After a long hike through treacherous forest, you come upon the house of a wizened gnome. \"Come closer, my children.  I've been expecting you,\" he says.  He tells you that he is the Wizard Siamor, and that it is his eternal duty to guard the forest from the Goblin King. \"He is gaining in strength,\" says Siamor, \"and he must be stopped.\  Will you swear allegiance to the Gnomish King and stop the Goblin invasion?\"  \<button id=\"siamor-yes\" class=\"zerd-btn\"\>Yes.\<\/button\><button class=\"zerd-btn\" id=\"siamor-no\"\>No.\<\/button\>" 
 	}	
 ]

@@ -47,7 +47,19 @@
 				color: black;
 
 			}
-		</style>
+			.zerd-btn-solid{
+
+				color: black;
+				background-color:lightgreen;
+				border-color: lightgreen;
+			}
+			.zerd-btn-solid:hover{
+
+				background-color: black;
+				color: lightgreen;
+
+			}
+	</style>
 
 	</head>
 
@@ -68,50 +80,6 @@
 		</textarea>
 
 	</body>
-<script type="module">
-
-	import * as dialogs from './zerd.json';
-
-	const question = document.getElementById('question');
-
-	const answer = document.getElementById('answer');
-
-	answer.addEventListener('keydown', function(e){
-
-
-		if(e.key == 'Enter'){
-
-			let val = answer.value.trim();
-
-			setQuestion(val);
-
-		}
-			
-	});
-
-	function setQuestion(val){
-
-
-			let if_answers = [];
-
-			for(var i=0; i<dialogs.length; i++){
-
-				if_answers[i] = dialogs[i].if_answer;
-
-
-			}
-
-			for(var i=0; i<if_answers.length; i++){
-
-				if(val == if_answers[i]){
-
-					answer.value = ' '.trim();
-					question.innerHTML = dialogs[i].then_question;
-
-				}
-
-			}
-
-		}
+<script type="module" src="./app.js">
 </script>
 </html>
