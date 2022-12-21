@@ -30,12 +30,30 @@ function setQuestion(val){
 		}
 
 		for(var i=0; i<if_answers.length; i++){
+			
+			if(val.trim() == if_answers[i]){
 
-			if(val == if_answers[i]){
+				console.log(val);
+				console.log(if_answers[i]);
 
 				answer.value = ' '.trim();
 				question.innerHTML = zerd[i].then_question;
-				setSiamorClick();
+				return console.log('groovy');
+
+			}
+			if(val == 'wake up' || val == 'Wake up!'){
+		
+				answer.value = ' '.trim();
+				question.innerHTML = 'You rouse, sputtering.';
+				return console.log('groovy else if');
+			
+			}
+			if(JSON.stringify(zerd).indexOf(val.trim()) == -1 ){
+		
+				answer.value = ' '.trim();
+				question.innerHTML = 'The wind blows, and the stars twinkle.  You curl up under a tree for a long winter\'s nap.  You begin to snore.  A late to hibernate squirrel takes a sniff of the air and then runs up a tree.  Nighty night.';
+				return console.log('groovy else');
+
 			}
 
 		}
