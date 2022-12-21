@@ -38,14 +38,15 @@ function setQuestion(val){
 
 				answer.value = ' '.trim();
 				question.innerHTML = zerd[i].then_question;
-				return console.log('groovy');
-	
+
 				if(val.trim() == 'move toward the light'){
 
 					setSiamorClick();
 
 				}
 
+				return console.log('groovy');
+	
 			}
 			if(val == 'wake up' || val == 'Wake up!'){
 		
