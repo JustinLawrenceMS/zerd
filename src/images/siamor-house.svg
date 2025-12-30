@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky background -->
+  <rect width="800" height="600" fill="#1a1a2e"/>
+  
+  <!-- Forest canopy -->
+  <ellipse cx="400" cy="150" rx="350" ry="120" fill="#0d2817" opacity="0.8"/>
+  
+  <!-- Wizard's hut -->
+  <rect x="300" y="280" width="200" height="150" fill="#8b6f47"/>
+  <polygon points="300,280 400,150 500,280" fill="#6b4423"/>
+  
+  <!-- Roof details -->
+  <line x1="300" y1="280" x2="400" y2="150" stroke="#5c3a1f" stroke-width="2"/>
+  <line x1="500" y1="280" x2="400" y2="150" stroke="#5c3a1f" stroke-width="2"/>
+  
+  <!-- Door -->
+  <rect x="370" y="350" width="60" height="80" fill="#3d2817"/>
+  <circle cx="420" cy="390" r="4" fill="#c9a876"/>
+  
+  <!-- Window -->
+  <rect x="320" y="310" width="40" height="40" fill="#ffd700" opacity="0.8"/>
+  <line x1="340" y1="310" x2="340" y2="350" stroke="#8b6f47" stroke-width="1"/>
+  <line x1="320" y1="330" x2="360" y2="330" stroke="#8b6f47" stroke-width="1"/>
+  
+  <!-- Light glow from window -->
+  <circle cx="340" cy="330" r="60" fill="#ffd700" opacity="0.15"/>
+  
+  <!-- Mushrooms around hut -->
+  <circle cx="250" cy="420" r="15" fill="#d41159"/>
+  <polygon points="250,420 240,400 260,400" fill="#8b0000"/>
+  
+  <circle cx="520" cy="430" r="12" fill="#d41159"/>
+  <polygon points="520,430 512,415 528,415" fill="#8b0000"/>
+  
+  <!-- Gnome silhouette in window -->
+  <circle cx="340" cy="315" r="8" fill="#333333"/>
+  
+  <!-- Ground -->
+  <ellipse cx="400" cy="600" rx="400" ry="30" fill="#0a0a14"/>
+  
+  <!-- Text -->
+  <text x="400" y="550" font-size="24" fill="#90ee90" text-anchor="middle" font-family="Arial">
+    Wizard Siamor's Dwelling
+  </text>
+</svg>

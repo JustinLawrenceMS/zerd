@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark cavern background -->
+  <rect width="800" height="600" fill="#0a0a0a"/>
+  
+  <!-- Rock formations -->
+  <polygon points="0,600 50,500 100,600" fill="#2a2a2a"/>
+  <polygon points="150,600 200,480 250,600" fill="#1a1a1a"/>
+  <polygon points="350,600 400,450 450,600" fill="#2a2a2a"/>
+  <polygon points="550,600 600,470 650,600" fill="#1a1a1a"/>
+  <polygon points="700,600 750,500 800,600" fill="#2a2a2a"/>
+  
+  <!-- Lava flows -->
+  <ellipse cx="200" cy="500" rx="80" ry="40" fill="#ff4500" opacity="0.7"/>
+  <ellipse cx="600" cy="520" rx="100" ry="45" fill="#ff6347" opacity="0.6"/>
+  
+  <!-- Lava glow -->
+  <ellipse cx="200" cy="500" rx="120" ry="60" fill="#ff4500" opacity="0.2"/>
+  <ellipse cx="600" cy="520" rx="140" ry="70" fill="#ff6347" opacity="0.15"/>
+  
+  <!-- Stone bridge -->
+  <rect x="280" y="350" width="240" height="20" fill="#5c5c5c"/>
+  <rect x="290" y="360" width="220" height="8" fill="#4a4a4a"/>
+  
+  <!-- Bridge supports -->
+  <rect x="300" y="370" width="15" height="100" fill="#4a4a4a"/>
+  <rect x="485" y="370" width="15" height="100" fill="#4a4a4a"/>
+  
+  <!-- Orb of light on bridge -->
+  <circle cx="400" cy="340" r="25" fill="#87ceeb" opacity="0.8"/>
+  <circle cx="400" cy="340" r="20" fill="#90ee90" opacity="0.6"/>
+  
+  <!-- Glow from orb -->
+  <circle cx="400" cy="340" r="80" fill="#87ceeb" opacity="0.1"/>
+  
+  <!-- Stalactites -->
+  <polygon points="150,0 140,80 160,80" fill="#3a3a3a"/>
+  <polygon points="350,0 335,100 365,100" fill="#2a2a2a"/>
+  <polygon points="600,0 580,90 620,90" fill="#3a3a3a"/>
+  <polygon points="750,0 735,70 765,70" fill="#2a2a2a"/>
+  
+  <!-- Text -->
+  <text x="400" y="300" font-size="24" fill="#90ee90" text-anchor="middle" font-family="Arial">
+    Underground Cavern
+  </text>
+</svg>

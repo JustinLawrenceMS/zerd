@@ -1,96 +1,83 @@
 import zerd from './zerd.json';
+import { sceneImages } from './scenes.js';
 
 const question = document.getElementById('question');
-
 const answer = document.getElementById('answer');
+const sceneImage = document.getElementById('sceneImage');
 
-answer.addEventListener('keydown', function(e){
+// Build answer map for efficient lookup
+const answerMap = buildAnswerMap();
 
+function buildAnswerMap() {
+  const map = {};
+  zerd.forEach((item) => {
+    map[item.if_answer.toLowerCase()] = item;
+  });
+  return map;
+}
 
-	if(e.key == 'Enter'){
+function loadSceneImage(settingId) {
+  const imageSVG = sceneImages[settingId] || sceneImages[1];
+  sceneImage.innerHTML = imageSVG;
+}
 
-		let val = answer.value.trim();
+// Load initial scene image
+loadSceneImage(1);
 
-		setQuestion(val);
-
-	}
-		
+answer.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    const userInput = answer.value.trim().toLowerCase();
+    setQuestion(userInput);
+  }
 });
 
-function setQuestion(val){
+function setQuestion(userInput) {
+  // Check for special case: wake up
+  if (userInput === 'wake up') {
+    answer.value = '';
+    question.innerHTML = 'You rouse, sputtering.';
+    loadSceneImage(1);
+    return;
+  }
 
+  // Look up answer in the map
+  const dialogItem = answerMap[userInput];
+  if (dialogItem) {
+    answer.value = '';
+    question.innerHTML = dialogItem.then_question;
+    loadSceneImage(dialogItem.setting_id);
 
-		let if_answers = [];
+    // Handle special logic for specific answers
+    if (userInput === 'move toward the light') {
+      setSiamorClick();
+    }
+    return;
+  }
 
-		for(var i=0; i<zerd.length; i++){
-
-			if_answers[i] = zerd[i].if_answer;
-
-
-		}
-
-		for(var i=0; i<if_answers.length; i++){
-			
-			if(val.trim() == if_answers[i]){
-
-				console.log(val);
-				console.log(if_answers[i]);
-
-				answer.value = ' '.trim();
-				question.innerHTML = zerd[i].then_question;
-
-				if(val.trim() == 'move toward the light'){
-
-					setSiamorClick();
-
-				}
-
-				return console.log('groovy');
-	
-			}
-			if(val == 'wake up' || val == 'Wake up!'){
-		
-				answer.value = ' '.trim();
-				question.innerHTML = 'You rouse, sputtering.';
-				return console.log('groovy else if');
-			
-			}
-			if(JSON.stringify(zerd).indexOf(val.trim()) == -1 ){
-		
-				answer.value = ' '.trim();
-				question.innerHTML = 'The wind blows, and the stars twinkle.  You curl up under a tree for a long winter\'s nap.  You begin to snore.  A late to hibernate squirrel takes a sniff of the air and then runs up a tree.  Nighty night.';
-				return console.log('groovy else');
-
-			}
-
-		}
-
-	}
-
-/* Logic for css class zerd-btn
-*
-*/
-
-function setSiamorClick(){
-
-	let zerdBtns = document.getElementsByClassName('zerd-btn');
-
-	if(zerdBtns){
-
-		for(var i=0; i<zerdBtns.length; i++){
-
-			if(zerdBtns[i].id == 'siamor-yes' ||
-				zerdBtns[i].id == 'siamor-no'){
-				zerdBtns[i].addEventListener('click', handleSiamor);
-			}
-
-		}
-
-	}
-
+  // No valid answer found
+  answer.value = '';
+  question.innerHTML = 'The wind blows, and the stars twinkle. You curl up under a tree for a long winter\'s nap. You begin to snore. A late to hibernate squirrel takes a sniff of the air and then runs up a tree. Nighty night.';
+  loadSceneImage(1);
 }
-function handleSiamor(){
 
-	alert(this.id);
+/**
+ * Setup click handlers for Siamor scenario buttons
+ */
+function setSiamorClick() {
+  const yesButton = document.getElementById('siamor-yes');
+  const noButton = document.getElementById('siamor-no');
 
+  if (yesButton) {
+    yesButton.addEventListener('click', handleSiamor);
+  }
+  if (noButton) {
+    noButton.addEventListener('click', handleSiamor);
+  }
+}
+
+/**
+ * Handle clicks on Siamor buttons
+ */
+function handleSiamor() {
+  setQuestion(this.id);
 }

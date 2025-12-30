@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sacred chamber - light background -->
+  <rect width="800" height="600" fill="#1a1a3e"/>
+  
+  <!-- Magical glowing walls -->
+  <rect x="50" y="50" width="700" height="500" fill="#2d2d5f" stroke="#6699ff" stroke-width="3"/>
+  
+  <!-- Wall glow -->
+  <rect x="50" y="50" width="700" height="500" fill="#6699ff" opacity="0.05"/>
+  
+  <!-- Starlight runes on walls -->
+  <text x="100" y="150" font-size="30" fill="#6699ff" opacity="0.6">✦</text>
+  <text x="700" y="200" font-size="30" fill="#6699ff" opacity="0.6">✦</text>
+  <text x="150" y="450" font-size="30" fill="#6699ff" opacity="0.6">✦</text>
+  <text x="650" y="500" font-size="30" fill="#6699ff" opacity="0.6">✦</text>
+  
+  <!-- Floating pedestals/pillars -->
+  <rect x="150" y="300" width="40" height="200" fill="#4a4a6b"/>
+  <rect x="610" y="320" width="40" height="180" fill="#4a4a6b"/>
+  
+  <!-- The Crystal of Starlight - center stage -->
+  <g transform="translate(400, 250)">
+    <!-- Crystal body -->
+    <polygon points="0,-80 40,-30 30,40 -30,40 -40,-30" fill="#ffffff"/>
+    <polygon points="0,-80 -40,-30 -30,40 30,40 40,-30" fill="#e6f3ff" opacity="0.7"/>
+    
+    <!-- Inner glow -->
+    <polygon points="0,-70 30,-20 20,35 -20,35 -30,-20" fill="#99ccff" opacity="0.5"/>
+    
+    <!-- Radiant shine -->
+    <line x1="0" y1="-85" x2="0" y2="50" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+    <line x1="-45" y1="0" x2="45" y2="0" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Particle effects around crystal -->
+    <circle cx="60" cy="-40" r="3" fill="#99ccff" opacity="0.8"/>
+    <circle cx="-55" cy="20" r="2" fill="#99ccff" opacity="0.7"/>
+    <circle cx="50" cy="50" r="2.5" fill="#99ccff" opacity="0.8"/>
+    <circle cx="-60" cy="-50" r="2" fill="#99ccff" opacity="0.6"/>
+  </g>
+  
+  <!-- Energy waves radiating from crystal -->
+  <circle cx="400" cy="250" r="80" fill="none" stroke="#6699ff" stroke-width="2" opacity="0.3"/>
+  <circle cx="400" cy="250" r="120" fill="none" stroke="#6699ff" stroke-width="1" opacity="0.2"/>
+  <circle cx="400" cy="250" r="160" fill="none" stroke="#6699ff" stroke-width="1" opacity="0.1"/>
+  
+  <!-- Light rays -->
+  <line x1="400" y1="250" x2="700" y2="100" stroke="#99ccff" stroke-width="1" opacity="0.3"/>
+  <line x1="400" y1="250" x2="100" y2="150" stroke="#99ccff" stroke-width="1" opacity="0.3"/>
+  <line x1="400" y1="250" x2="650" y2="500" stroke="#99ccff" stroke-width="1" opacity="0.3"/>
+  <line x1="400" y1="250" x2="150" y2="480" stroke="#99ccff" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Text -->
+  <text x="400" y="550" font-size="24" fill="#90ee90" text-anchor="middle" font-family="Arial">
+    The Crystal of Starlight
+  </text>
+</svg>

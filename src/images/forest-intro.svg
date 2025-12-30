@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Night sky -->
+  <rect width="800" height="600" fill="#0a1428"/>
+  
+  <!-- Stars -->
+  <circle cx="100" cy="50" r="1.5" fill="#ffffff"/>
+  <circle cx="200" cy="80" r="1" fill="#ffffff"/>
+  <circle cx="350" cy="40" r="1.5" fill="#ffffff"/>
+  <circle cx="500" cy="70" r="1" fill="#ffffff"/>
+  <circle cx="650" cy="50" r="1.5" fill="#ffffff"/>
+  <circle cx="750" cy="90" r="1" fill="#ffffff"/>
+  <circle cx="150" cy="120" r="1" fill="#ffffff"/>
+  <circle cx="600" cy="100" r="1" fill="#ffffff"/>
+  <circle cx="700" cy="150" r="1" fill="#ffffff"/>
+  
+  <!-- Moon -->
+  <circle cx="700" cy="100" r="50" fill="#e8d4a0"/>
+  
+  <!-- Forest trees (silhouettes) -->
+  <polygon points="50,600 100,350 150,600" fill="#1a3a1a"/>
+  <polygon points="120,600 180,300 240,600" fill="#0d2e0d"/>
+  <polygon points="280,600 350,280 420,600" fill="#1a3a1a"/>
+  <polygon points="500,600 570,320 640,600" fill="#0d2e0d"/>
+  <polygon points="650,600 730,300 810,600" fill="#1a3a1a"/>
+  
+  <!-- Shorter trees -->
+  <polygon points="30,600 60,400 90,600" fill="#0d2e0d"/>
+  <polygon points="450,600 490,380 530,600" fill="#1a3a1a"/>
+  
+  <!-- Dungeon door -->
+  <rect x="320" y="380" width="160" height="220" fill="#3d2817" stroke="#5c4a2e" stroke-width="3"/>
+  <circle cx="450" cy="490" r="8" fill="#8b7355"/>
+  
+  <!-- Door details -->
+  <line x1="340" y1="380" x2="340" y2="600" stroke="#5c4a2e" stroke-width="2"/>
+  <line x1="360" y1="380" x2="360" y2="600" stroke="#5c4a2e" stroke-width="1"/>
+  <line x1="380" y1="380" x2="380" y2="600" stroke="#5c4a2e" stroke-width="1"/>
+  <line x1="400" y1="380" x2="400" y2="600" stroke="#5c4a2e" stroke-width="1"/>
+  <line x1="420" y1="380" x2="420" y2="600" stroke="#5c4a2e" stroke-width="1"/>
+  <line x1="440" y1="380" x2="440" y2="600" stroke="#5c4a2e" stroke-width="1"/>
+  <line x1="460" y1="380" x2="460" y2="600" stroke="#5c4a2e" stroke-width="1"/>
+  
+  <!-- Glow around door -->
+  <circle cx="400" cy="490" r="80" fill="#4a3a2a" opacity="0.3"/>
+  
+  <!-- Text -->
+  <text x="400" y="550" font-size="24" fill="#90ee90" text-anchor="middle" font-family="Arial">
+    Dark Dungeon Entrance
+  </text>
+</svg>

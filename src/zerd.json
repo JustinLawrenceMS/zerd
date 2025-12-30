@@ -4,34 +4,167 @@
 		"setting_id":1,
 		"setting_description":"forest intro",
 		"if_answer":"kick him",
-		"then_question":"Your kick lands on empty air.  The goblin has already closed the door to the dungeon and has gone back inside.  What do you want to do now?"
+		"then_question":"Your kick lands on empty air. The goblin has already closed the door to the dungeon and has gone back inside. You hear cruel laughter echoing from within. What do you want to do now?"
 	},
 	{
 		"dialog_id":2,
 		"setting_id":1,
 		"setting_description":"forest intro",
 		"if_answer":"look around",
-		"then_question":"The air is cool and crisp and the moon is shining brightly.  There is no breeze.  The forest is very still.  Under the baugh of the tree you see a crudely but well camoflaged door and you hear a din of laughter rattling off from far away in the dungeon.  Just then, you see the wings of a large bird or flying reptile sillohuetted against the moon.  You see the glow of something like a window or a stationary oil lamp off in a distant part of the forest.  What do you want to do now?"
+		"then_question":"The air is cool and crisp and the moon is shining brightly. There is no breeze. The forest is very still. Under the bough of the tree you see a crudely but well camouflaged door and you hear a din of laughter rattling off from far away in the dungeon. Just then, you see the wings of a large bird or flying reptile silhouetted against the moon. You see the glow of something like a window or a stationary oil lamp off in a distant part of the forest. What do you want to do now?"
 	},
 	{
 		"dialog_id":3,
 		"setting_id":1,
 		"setting_description":"forest intro",
 		"if_answer":"open the door",
-		"then_question":"The door is locked.  What do you want to do now?"
+		"then_question":"The door is locked. It's heavy oak reinforced with iron bands. You notice fresh scratches around the lock—someone has tried to pick it recently. What do you want to do now?"
 	},
 	{
 		"dialog_id":4,
 		"setting_id":1,
 		"setting_description":"forest intro",
 		"if_answer":"move toward the light",
-		"then_question":"After a long hike through treacherous forest, you come upon the house of a wizened gnome. \"Come closer, my children.  I've been expecting you,\" he says.  He tells you that he is the Wizard Siamor, and that it is his eternal duty to guard the forest from the Goblin King. \"He is gaining in strength,\" says Siamor, \"and he must be stopped.\  Will you swear allegiance to the Gnomish King and stop the Goblin invasion?\"  \<button id=\"siamor-yes\" class=\"zerd-btn\"\>Yes.\<\/button\><button class=\"zerd-btn\" id=\"siamor-no\"\>No.\<\/button\>" 
+		"then_question":"After a long hike through treacherous forest, you come upon the house of a wizened gnome. \"Come closer, my children. I've been expecting you,\" he says. He tells you that he is the Wizard Siamor, and that it is his eternal duty to guard the forest from the Goblin King. \"He is gaining in strength,\" says Siamor, \"and he must be stopped. Will you swear allegiance to the Gnomish King and stop the Goblin invasion?\" <button id=\"siamor-yes\" class=\"zerd-btn\">Yes.</button><button class=\"zerd-btn\" id=\"siamor-no\">No.</button>"
 	},
-	{ 
+	{
 		"dialog_id":5,
 		"setting_id":1,
 		"setting_description":"forest intro",
 		"if_answer":"break down the door",
-		"then_question":"You can't. It's magic.  What do you want to do now?"
-	}	
+		"then_question":"You can't. It's magic. An invisible force repels you backward. You land hard on the ground. Your shoulder aches. What do you want to do now?"
+	},
+	{
+		"dialog_id":6,
+		"setting_id":2,
+		"setting_description":"forest - search for clues",
+		"if_answer":"search the ground",
+		"then_question":"You find a torn piece of parchment near the door. On it is written: 'The gnome knows the way. Trust only the light.' You also find a small brass key, half-buried in moss. What do you want to do now?"
+	},
+	{
+		"dialog_id":7,
+		"setting_id":2,
+		"setting_description":"forest - search for clues",
+		"if_answer":"follow the flying creature",
+		"then_question":"You try to follow the creature's shadow through the dark forest. Branches whip at your face and you stumble often. After what feels like hours, you lose sight of it in the clouds. You're hopelessly lost. What do you want to do now?"
+	},
+	{
+		"dialog_id":8,
+		"setting_id":2,
+		"setting_description":"forest - door interaction",
+		"if_answer":"use the key",
+		"then_question":"The brass key fits perfectly! The door clicks open with a soft creak. Cold air rushes out from the darkness below. You can hear the faint sound of running water and distant voices. A stone staircase descends into blackness. Do you dare enter?"
+	},
+	{
+		"dialog_id":9,
+		"setting_id":2,
+		"setting_description":"forest - door interaction",
+		"if_answer":"listen at the door",
+		"then_question":"You press your ear against the cold wood. The laughter stops abruptly. You hear whispers—goblins plotting something sinister about 'the artifact' and 'the human who might interfere.' Your heart races. What do you want to do now?"
+	},
+	{
+		"dialog_id":10,
+		"setting_id":3,
+		"setting_description":"siamor - accepted quest",
+		"if_answer":"siamor-yes",
+		"then_question":"Siamor's eyes glow with an otherworldly light. 'Excellent,' he says. 'The Goblin King has stolen the Crystal of Starlight from the Gnomish Temple. Without it, our realm weakens. You must retrieve it from the depths of the dungeon.' He hands you a glowing orb. 'This will light your way and protect you from goblin magic.' What do you do now?"
+	},
+	{
+		"dialog_id":11,
+		"setting_id":3,
+		"setting_description":"siamor - rejected quest",
+		"if_answer":"siamor-no",
+		"then_question":"Siamor's face darkens with disappointment. 'So be it,' he says coldly. 'But know this: if you will not help us, darkness will consume this realm... and eventually, the world beyond.' He turns away. 'You are free to go, but the dungeon door will remain a mystery to you.' You feel the weight of the world's fate resting on your shoulders. What do you want to do now?"
+	},
+	{
+		"dialog_id":12,
+		"setting_id":4,
+		"setting_description":"dungeon - entered",
+		"if_answer":"enter the dungeon",
+		"then_question":"You descend the stone stairs, your footsteps echoing in the darkness. The air grows colder and damper. Your eyes slowly adjust to the gloom. You reach a small chamber with three tunnels before you. The left tunnel glows faintly red. The center tunnel smells of sulfur. The right tunnel echoes with running water. Which tunnel do you choose?"
+	},
+	{
+		"dialog_id":13,
+		"setting_id":4,
+		"setting_description":"dungeon - left tunnel",
+		"if_answer":"go left",
+		"then_question":"You venture down the left tunnel. The red glow intensifies. You stumble into a vast chamber filled with molten lava flows. A massive red drake sleeps on an island of black rock in the center. Its treasure hoard glimmers with gold and jewels. But you also see something else—a smaller tunnel leading deeper, and on a nearby rock, you spot the faint outline of the Crystal of Starlight! How do you proceed?"
+	},
+	{
+		"dialog_id":14,
+		"setting_id":4,
+		"setting_description":"dungeon - center tunnel",
+		"if_answer":"go straight",
+		"then_question":"You enter the center tunnel cautiously. The sulfur smell becomes overpowering. You see markings on the walls—ancient runes that seem to pulse with dark energy. Suddenly, you hear chittering and see hundreds of pairs of glowing eyes in the shadows. Goblin warriors! 'Intruder!' they screech. 'The King will reward us for your capture!' What do you do?"
+	},
+	{
+		"dialog_id":15,
+		"setting_id":4,
+		"setting_description":"dungeon - right tunnel",
+		"if_answer":"go right",
+		"then_question":"The right tunnel leads to an underground river of cool, clear water. The tunnel opens into a vast cavern lit by bioluminescent plants. In the center is a stone bridge spanning the river. On the far side, you see an ornate door carved with images of stars and moons. Your instinct tells you this is important. But first, you must cross the bridge. You notice the water below swirls ominously. What do you do?"
+	},
+	{
+		"dialog_id":16,
+		"setting_id":5,
+		"setting_description":"fight or flee",
+		"if_answer":"fight",
+		"then_question":"You draw your weapon and prepare for battle. But as the goblins charge, you realize you're vastly outnumbered. Three goblin arrows strike you before you can react. Your vision blurs. You stumble backward and fall. The goblins laugh. It seems your adventure has come to an end. THE END."
+	},
+	{
+		"dialog_id":17,
+		"setting_id":5,
+		"setting_description":"fight or flee",
+		"if_answer":"run",
+		"then_question":"You spin around and sprint back down the tunnel. Goblin shouts echo behind you, but your heart pounds with adrenaline and you move faster. You burst back into the main chamber and—quick thinking!—you seal the tunnel entrance with a pile of rocks. Their angry voices fade. You've bought yourself time, but now you must find another route to the crystal. What will you do?"
+	},
+	{
+		"dialog_id":18,
+		"setting_id":6,
+		"setting_description":"lava chamber - approach",
+		"if_answer":"sneak toward the crystal",
+		"then_question":"You move silently along the cavern wall, keeping low. The drake's breathing is deep and rhythmic—it's still asleep. You're almost to the crystal when a loose stone crunches under your foot. The drake's eye opens! It raises its massive head and sniffs the air. A low rumble emanates from its chest. Do you run, hide, or try to communicate?"
+	},
+	{
+		"dialog_id":19,
+		"setting_id":6,
+		"setting_description":"lava chamber - treasure hoard",
+		"if_answer":"take the treasure",
+		"then_question":"Greed overwhelms your judgment. You scramble toward the nearest pile of gold coins. But the moment you touch them, the drake's head snaps up. Its eyes blaze with fury. 'THIEF!' it roars, flames erupting from its nostrils. What do you do?"
+	},
+	{
+		"dialog_id":20,
+		"setting_id":7,
+		"setting_description":"bridge - crossing",
+		"if_answer":"cross the bridge",
+		"then_question":"You take a deep breath and step onto the stone bridge. It holds steady. Halfway across, you hear a splash below. Something large moves in the water. Ripples disturb the surface. Then you see it—a massive serpent, easily as long as the river is wide, with scales that shimmer like moonlight. It surfaces and looks at you with ancient, intelligent eyes. But it doesn't attack. Instead, it bows slightly. What do you do?"
+	},
+	{
+		"dialog_id":21,
+		"setting_id":7,
+		"setting_description":"bridge - door",
+		"if_answer":"open the door",
+		"then_question":"The ornate door swings open silently. Beyond is a chamber even more breathtaking than the cavern outside. The walls glow with soft, ethereal light. In the center of the chamber, suspended in mid-air, hovers the Crystal of Starlight. It's more beautiful than you could have imagined—radiating pure, white light with hints of blue and purple. Around it, you sense ancient magic. This is what everyone has been seeking. But how will you claim it?"
+	},
+	{
+		"dialog_id":22,
+		"setting_id":8,
+		"setting_description":"final chamber - crystal puzzle",
+		"if_answer":"take the crystal",
+		"then_question":"Your hand closes around the crystal. For a moment, nothing happens. Then the chamber shakes violently. The crystal pulses with light. Suddenly, visions flood your mind: the history of the realm, the rise of the Goblin King, the sacrifice the gnomes made to protect the crystal. You understand now—the crystal chose you. As the shaking stops, you hear a voice: 'You are worthy.' What do you do with the crystal?"
+	},
+	{
+		"dialog_id":23,
+		"setting_id":8,
+		"setting_description":"final chamber - return to siamor",
+		"if_answer":"return to siamor",
+		"then_question":"You make your way back through the dungeon, the crystal's light guiding you safely past dangers. When you emerge from the forest, Siamor is waiting. His face brightens when he sees the glowing crystal. 'You did it,' he whispers in awe. 'You have restored hope to our realm.' As he takes the crystal, a wave of golden light spreads across the land. The darkness begins to recede. The goblin forces retreat in fear. Peace is returning. VICTORY!"
+	},
+	{
+		"dialog_id":24,
+		"setting_id":8,
+		"setting_description":"final chamber - keep crystal",
+		"if_answer":"keep the crystal",
+		"then_question":"You pocket the crystal and make your way back through the dungeon. But as you walk, you feel the crystal growing warm—almost hot. Whispers fill your mind, growing louder. The weight of the realm's fate presses down on you. You realize: keeping it for yourself means eternal torment and the slow decay of the world. In a moment of clarity, you understand what must be done. You must return it. But will it be too late?"
+	}
 ]

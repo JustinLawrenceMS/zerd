@@ -1,5 +1,5 @@
-<!DOCTYPE html5>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 	<head>
 
@@ -15,49 +15,105 @@
 
 			}
 
-			.question {
-
-				font-size: 1.5em;
-
+			body {
+				display: flex;
+				flex-direction: column;
+				height: 100vh;
+				margin: 0;
+				padding: 1em;
+				box-sizing: border-box;
 			}
-			.answer {
 
+			.header {
+				font-size: 2em;
+				margin-bottom: 0.5em;
+			}
+
+			.scene-container {
+				flex: 1;
+				display: flex;
+				gap: 2em;
+				margin-bottom: 1em;
+				min-height: 0;
+			}
+
+			.scene-image {
+				flex: 0 0 400px;
+				max-width: 400px;
+				height: 300px;
+				border: 2px solid lightgreen;
+				background-color: #1a1a1a;
+				overflow: hidden;
+			}
+
+			.scene-image svg {
+				width: 100%;
+				height: 100%;
+			}
+
+			.story-section {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				min-width: 0;
+			}
+
+			.question {
+				font-size: 1.5em;
+				margin-bottom: 1em;
+				flex-shrink: 0;
+			}
+
+			.answer {
 				width: 100%;
 				padding: 1em;
-				border: none;
+				border: 2px solid lightgreen;
 				font-size: 1.5em;
 				outline: none;
-				
-			
+				background-color: #0a0a0a;
+				color: lightgreen;
+				font-family: Play;
+				box-sizing: border-box;
 			}
-			.header{
 
-
-				font-size: 2em;
-
-			}
-			.zerd-btn{
-
-
+			.zerd-btn {
 				border-color: lightgreen;
-			}
-			.zerd-btn:hover{
-
-				background: lightgreen;
-				color: black;
-
-			}
-			.zerd-btn-solid{
-
-				color: black;
-				background-color:lightgreen;
-				border-color: lightgreen;
-			}
-			.zerd-btn-solid:hover{
-
 				background-color: black;
 				color: lightgreen;
+				padding: 0.5em 1em;
+				margin: 0.5em;
+				cursor: pointer;
+				font-family: Play;
+				font-size: 1em;
+			}
 
+			.zerd-btn:hover {
+				background: lightgreen;
+				color: black;
+			}
+
+			.zerd-btn-solid {
+				color: black;
+				background-color: lightgreen;
+				border-color: lightgreen;
+			}
+
+			.zerd-btn-solid:hover {
+				background-color: black;
+				color: lightgreen;
+			}
+
+			@media (max-width: 1024px) {
+				.scene-container {
+					flex-direction: column;
+				}
+
+				.scene-image {
+					flex: 0 0 250px;
+					max-width: 100%;
+					height: auto;
+					aspect-ratio: 800 / 600;
+				}
 			}
 	</style>
 
@@ -67,16 +123,22 @@
 
 		<h1 class="header">ZERD TEXT-BASED ADVENTURE</h1>
 
-		<div
-			id="question"
-			class="question">
-			You are walking alone through a moonlit forest when you see something you haven't seen before.  A goblin covered with strands of hair, moss and moonlight opens a door hidden at the root of a tree.  He pokes his head out, looks around, and, cackling evily, goes back in.  He doesn't see you.  What do you do?
+		<div class="scene-container">
+			<div class="scene-image" id="sceneImage">
+				<!-- Scene image will be loaded here -->
+			</div>
+			<div class="story-section">
+				<div id="question" class="question">
+					You are walking alone through a moonlit forest when you see something you haven't seen before. A goblin covered with strands of hair, moss and moonlight opens a door hidden at the root of a tree. He pokes his head out, looks around, and, cackling evilly, goes back in. He doesn't see you. What do you do?
+				</div>
+				<textarea
+					id="answer"
+					class="answer"
+					autofocus
+					placeholder="Type your action and press Enter..."
+				></textarea>
+			</div>
 		</div>
-		<textarea
-		    id="answer"   
-		    class="answer"
-		    autofocus>
-		</textarea>
 
 	</body>
 <script type="module" src="./app.js">
